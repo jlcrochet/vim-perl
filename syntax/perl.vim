@@ -193,7 +193,7 @@ syn match  perlSpecialMatch	"(?\%(&\|P[>=]\)\h\w*)" contained
 syn match  perlSpecialMatch	"(\*\%(\%(PRUNE\|SKIP\|THEN\)\%(:[^)]*\)\=\|\%(MARK\|\):[^)]*\|COMMIT\|F\%(AIL\)\=\|ACCEPT\))" contained
 
 " syn region perlRegexpBrackets	matchgroup=perlSpecialMatch start="\[\^\=" skip="\\\]" end="\]" contained transparent
-syn region perlSpecialMatch	start="\[\^\=" skip="\\\]" end="\]" contained
+syn region perlSpecialMatch	start="\[\^\=" skip="\\\]" end="\]" contained extend
 
 " Possible errors
 "
