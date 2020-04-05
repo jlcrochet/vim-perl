@@ -102,9 +102,11 @@ syn keyword perlStatementMisc		warn format formline reset scalar prototype lock 
 
 syn keyword perlTodo			TODO TODO: TBD TBD: FIXME FIXME: XXX XXX: NOTE NOTE: contained
 
-syn region perlStatementIndirObjWrap   matchgroup=perlStatementIndirObj start="\%(\<\%(map\|grep\|sort\|printf\=\|say\|system\|exec\)\>\s*\)\@<={" end="}" transparent extend
+syn keyword perlStatementIndirObj map grep sort print printf say system exec nextgroup=perlStatementIndirObjWrap skipwhite
+syn region perlStatementIndirObjWrap matchgroup=perlStatementIndirObj start="{" end="}" display contained
+" syn region perlStatementIndirObjWrap matchgroup=perlStatementIndirObj start="\%(\<\%(map\|grep\|sort\|printf\=\|say\|system\|exec\)\>\s*\)\zs{" end="}" transparent extend
 
-syn match perlLabel      "^\s*\h\w*\s*::\@!\%(\<v\d\+\s*:\)\@<!"
+syn match perlLabel "^\s*\h\w*\s*::\@!\%(\<v\d\+\s*:\)\@<!"
 
 " Perl Identifiers.
 "
