@@ -75,7 +75,6 @@ syn keyword perlRepeat			while for foreach do until continue
 syn keyword perlOperator		defined undef eq ne gt lt ge le cmp not and or xor not bless ref
 syn keyword perlControl			BEGIN CHECK INIT END UNITCHECK
 
-syn keyword perlStatementIndirObj	map grep sort print printf say system exec nextgroup=perlBraces skipwhite
 syn keyword perlStatementStorage	my our local state
 syn keyword perlStatementControl	return last next redo goto break
 syn keyword perlStatementScalar		chop chomp chr crypt index rindex lc lcfirst length ord pack sprintf substr fc uc ucfirst
@@ -103,7 +102,7 @@ syn keyword perlStatementMisc		warn format formline reset scalar prototype lock 
 
 syn keyword perlTodo			TODO TODO: TBD TBD: FIXME FIXME: XXX XXX: NOTE NOTE: contained
 
-" syn region perlStatementIndirObjWrap   matchgroup=perlStatementIndirObj start="\%(\<\%(map\|grep\|sort\|printf\=\|say\|system\|exec\)\>\s*\)\@<={" end="}" transparent extend
+syn region perlStatementIndirObjWrap   matchgroup=perlStatementIndirObj start="\%(\<\%(map\|grep\|sort\|printf\=\|say\|system\|exec\)\>\s*\)\@<={" end="}" transparent extend
 
 syn match perlLabel      "^\s*\h\w*\s*::\@!\%(\<v\d\+\s*:\)\@<!"
 
