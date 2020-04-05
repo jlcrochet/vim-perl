@@ -184,13 +184,15 @@ syn match  perlSpecialMatch	"\\[1-9]" contained extend
 syn match  perlSpecialMatch	"\\g\%(\d\+\|{\%(-\=\d\+\|\h\w*\)}\)" contained
 syn match  perlSpecialMatch	"\\k\%(<\h\w*>\|'\h\w*'\)" contained
 syn match  perlSpecialMatch	"{\d\+\%(,\%(\d\+\)\=\)\=}" contained
-syn match  perlSpecialMatch	"\[[]-]\=[^\[\]]*[]-]\=\]" contained extend
+" syn match  perlSpecialMatch	"\[[]-]\=[^\[\]]*[]-]\=\]" contained extend
 syn match  perlSpecialMatch	"[+*()?.]" contained
 syn match  perlSpecialMatch	"(?[#:=!]" contained
 syn match  perlSpecialMatch	"(?[impsx]*\%(-[imsx]\+\)\=)" contained
 syn match  perlSpecialMatch	"(?\%([-+]\=\d\+\|R\))" contained
 syn match  perlSpecialMatch	"(?\%(&\|P[>=]\)\h\w*)" contained
 syn match  perlSpecialMatch	"(\*\%(\%(PRUNE\|SKIP\|THEN\)\%(:[^)]*\)\=\|\%(MARK\|\):[^)]*\|COMMIT\|F\%(AIL\)\=\|ACCEPT\))" contained
+
+syn region perlRegexpBrackets	matchgroup=perlSpecialMatch start="\[\^\=" skip="\\\]" end="\]" contained transparent
 
 " Possible errors
 "
